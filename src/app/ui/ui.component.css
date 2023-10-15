@@ -1,0 +1,128 @@
+header {
+    background-color: #13216f;
+    color: white; /* Optionally, change text color to white for better contrast */
+    padding: 10px; /* Add some padding for spacing */
+  }
+
+  .product-dialog {
+    background-color: #fff;
+    border: 1px solid #ccc;
+   
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 78%;
+    height: 80%;
+  }
+
+  .header {
+    color: #534f4f; /* Optionally, change text color to white for better contrast */
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: #787575;
+    cursor: pointer;
+    margin-left: 10px; /* Add spacing between icons */
+  }
+  .blue-bar {
+    background-color: #e3e3e3; /* Set the background color to blue */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding as needed */
+  }  
+  
+  /* Styles for the scrollable container */
+.table-scroll {
+  height: 200px;
+  overflow-y: auto;
+  /* Add other necessary styles here */
+}
+
+  
+  .blue-button {
+    background-color: hsl(240, 25%, 94%);
+    color: rgb(12, 12, 12); /* Set the text color to white for better visibility on a blue background */
+    border: none; /* Remove the button border if desired */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners if desired */
+    border-color: hsl(232, 84%, 17%);
+  }
+  .blue-div {
+    background-color: #d8d8f4;
+    padding: 10px; /* Add padding to the div for spacing if desired */
+  }
+ /* Styles for the Models and Version tables */
+.left-table {
+  float: left;
+  width: 50%;
+ 
+}
+
+
+.right-table {
+  float: right;
+  width: 50%;
+  flex: 1;
+}
+
+/* Clear the float to ensure proper alignment of content below */
+.table-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  /* Styles for the vertical scrollbar */
+.vertical-scroll {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Show vertical scrollbar */
+  white-space: nowrap; /* Prevent line breaks for the table content */
+}
+
+.cell {
+  white-space: nowrap;     /* Prevent text from wrapping */
+  overflow: hidden;        /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add an ellipsis (...) to indicate truncated content */
+}
+.minimize-icon {
+  color: #007bff; /* Blue color for minimize */
+}
+
+maximize-icon {
+  color: #28a745; /* Green color for maximize */
+}
+
+.refresh-icon {
+  color: #ffc107; /* Yellow color for refresh */
+}
+
+.close-icon {
+  color: #dc3545; /* Red color for close */
+}
+.custom-blue-icon .pi {
+  color: blue !important; /* Change the color to blue */
+}
+
+.custom-red-icon {
+  color: red !important; /* Change the color to red */
+}
+
+.blue-label {
+  color: blue !important;
+}
+/* Make the header bar blue */
+.ui-dialog .ui-dialog-titlebar {
+  background-color: blue;
+  color: white; /* Set text color to white for better visibility */
+}
+

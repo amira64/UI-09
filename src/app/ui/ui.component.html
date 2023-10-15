@@ -1,0 +1,389 @@
+<header>
+  <h1>Support Registration</h1>
+</header>
+
+
+
+
+<div class="card flex justify-content-center">
+  <p-panelMenu [model]="items" [style]="{'width':'300px'}" [multiple]="true"></p-panelMenu>
+</div>
+
+<div *ngIf="showProductDialog" class="product-dialog">
+  <div class="blue-bar">
+    <!-- Title -->
+    <div class="header">
+      <h3>Product</h3>
+    </div>
+
+    
+
+    <!-- Icons (on top right) -->
+    <div class="icons">
+      <!-- Minimize Icon -->
+     <!-- Minimize Icon -->
+<button class="icon-button minimize-icon" (click)="minimizeProductDialog()">
+  <i class="pi pi-window-minimize"></i>
+</button>
+
+<!-- Maximize Icon -->
+<button class="icon-button maximize-icon" (click)="maximizeProductDialog()">
+  <i class="pi pi-window-maximize"></i>
+</button>
+
+<!-- Refresh Icon -->
+<button class="icon-button refresh-icon" (click)="refreshProductDialog()">
+  <i class="pi pi-refresh"></i>
+</button>
+
+<!-- Close Icon -->
+<button class="icon-button close-icon" (click)="hideProductDialog()">
+  <i class="pi pi-times"></i>
+</button>
+
+    </div>
+  </div>
+  
+  <div class="blue-div">
+    <button class="blue-button">Add new record</button>
+  </div>
+  <!-- Table Content -->
+  <div class="table-content">
+    <div class="card">
+      
+      <div class="table-scroll vertical-scroll" style="height: 200px; overflow-y: auto;">
+        <p-table [value]="Products" [scrollable]="true" [scrollHeight]="'400px'" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>SL.NO</th>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Current Version</th> 
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td>aaa</td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>P123</td>
+            <td>Product1 </td>
+            <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    </div>
+    
+
+    <div class="blue-bar">
+    <label>PDO</label></div>
+    
+    <div class="blue-div">
+      <button class="blue-button">Add new record</button>
+    </div>
+    
+    <div class="table-content left-table">
+      <div class="card models-table">
+      
+        <p-table [value]="Models" [scrollable]="true" scrollHeight="300px" [tableStyle]="{'min-width': '50rem'}">
+          <ng-template pTemplate="header">
+            <tr>
+              <th style="width:7%">Product Code</th>
+              <th style="width:7%">Product Name</th>
+              <th style="width:7%">Actions</th>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+             <!---- <button type="button" pButton pRipple icon="pi pi-times" (click)="dialogVisible=false" label="Dismiss" class="p-button-text"></button>-->
+             <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+              <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr> <tr>
+              <td>P123</td>
+              <td>Product1 </td>
+              <td><button type="button" (click)="editProduct(Products)" pButton pRipple icon="pi pi-pencil"  class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button></td>
+            </tr>
+            
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+
+    <div class="table-content right-table">
+      <div class="card version-table">
+       
+        <p-table [value]="Version" [scrollable]="true" scrollHeight="300px" [tableStyle]="{'min-width': '50rem'}">
+          <ng-template pTemplate="header">
+            <tr>
+              <th style="width:20%">SL.NO</th>
+              <th style="width:20%">Current Version</th>
+              <th style="width:20%">Actions</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td> <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>P123</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-pencil" class="custom-blue-icon" pTooltip="Edit" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-times custom-red-icon" pTooltip="Cancel" tooltipPosition="bottom"></button>
+                <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+              </td>
+            </tr>
+           
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+
+
+
+
+    <p-dialog header="Edit Moudle" [(visible)]="showEditProductDialog" [style]="{ width: '50vw' }">
+      <ng-template pTemplate="header">
+        <div class="blue-header">
+          <span class="text-xl font-bold">Edit Moudle</span>
+        </div>
+      </ng-template>
+      <div>
+        <div class="p-grid p-fluid">
+          <div class="p-col-4">
+            <label class="blue-label" for="MoudleCode">Moudle Code &nbsp;:</label>
+            <input id="MoudleCode"  />
+          </div>
+          <div class="p-col-4">
+            <label class="blue-label" for="MoudletName">Moudle Name :</label>
+            <input id="MoudletName"  />
+          </div>
+          <div class="p-col-4">
+            <label class="blue-label" for="code">SL NO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+            <input id="code"  />
+          </div>
+        </div>
+      </div>
+      <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="saveProductChanges()" label="Save" styleClass="p-button-text custom-blue-button"></p-button>
+        <p-button icon="pi pi-times" (click)="cancelProductEdit()" label="Cancel" styleClass="p-button-text custom-red-button"></p-button>
+      </ng-template>
+    </p-dialog>
+    
+    
+
+  </div>
+</div>
